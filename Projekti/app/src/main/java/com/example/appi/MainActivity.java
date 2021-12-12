@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     ListView kaupunkiLista;
 
@@ -37,5 +39,15 @@ public class MainActivity extends AppCompatActivity {
         kaupungit.add("Helsinki");
         ArrayAdapter<String> kaupunkiadapteri = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, kaupungit);
         kaupunkiLista.setAdapter(kaupunkiadapteri);
+        kaupunkiLista.setOnItemClickListener(this);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        String otsikko = parent.getItemAtPosition(position).toString();
+        setContentView(R.layout.keikat);
+        TextView otsikkokaupunki = (TextView) findViewById(R.id.textView2);
+        otsikkokaupunki.setText(otsikko);
+
     }
 }
