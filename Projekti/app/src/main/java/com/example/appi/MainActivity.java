@@ -50,4 +50,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         otsikkokaupunki.setText(otsikko);
 
     }
+
+    public void painaGPS(View view) {
+        setContentView(R.layout.gps);
+
+    }
+
+
+
+
 }
