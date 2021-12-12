@@ -20,6 +20,7 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="luoKeikka"
         android:text="Lisää uusi keikka"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,8 +31,8 @@
 
     <ListView
         android:id="@+id/keikkaLista"
-        android:layout_width="326dp"
-        android:layout_height="566dp"
+        android:layout_width="341dp"
+        android:layout_height="472dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
