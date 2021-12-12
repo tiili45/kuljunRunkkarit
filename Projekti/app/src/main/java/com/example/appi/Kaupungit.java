@@ -4,9 +4,12 @@ import java.util.ArrayList;
 
 public class Kaupungit {
 
-    public static ArrayList<String> kaupungit = new ArrayList<>(); /* lista paikoista, jossa toimitukset pyörii */
+    // ArrayList<String> kaupungit = new ArrayList<>(); /* lista paikoista, jossa toimitukset pyörii */
 
     public Kaupungit() {
+    }
+
+    /*public void lisaaKaupungit() {
         kaupungit.add("Jyväskylä");
         kaupungit.add("Tampere");
         kaupungit.add("Helsinki");
@@ -16,13 +19,5 @@ public class Kaupungit {
         kaupungit.add("Seinäjoki");
         kaupungit.add("Pieksämäki");
         kaupungit.add("Kanamäki");
-    }
-
-    public void setKaupungit(ArrayList<String> kaupungit) {
-        this.kaupungit = kaupungit;
-    }
-
-    public static ArrayList<String> getKaupungit() {
-        return kaupungit;
-    }
+    } */
 }

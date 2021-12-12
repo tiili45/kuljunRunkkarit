@@ -3,6 +3,7 @@ package com.example.appi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.ContentInfo;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -28,9 +29,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void painaKirjaudu(View view) {
         setContentView(R.layout.paaikkuna);
         kaupunkiLista = findViewById(R.id.kaupunkiLista);
-        ArrayAdapter<String> kaupunkiadapteri = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Kaupungit.getKaupungit());
+        ArrayList<String> kaupungit = new ArrayList<>(); // lista paikoista, jossa toimitukset pyörii
+        kaupungit.add("Jyväskylä");
+        kaupungit.add("Tampere");
+        kaupungit.add("Helsinki");
+        kaupungit.add("Varkaus");
+        kaupungit.add("Leppävirta");
+        kaupungit.add("Hyvinkää");
+        kaupungit.add("Seinäjoki");
+        kaupungit.add("Pieksämäki");
+        kaupungit.add("Kanamäki");
+        ArrayAdapter<String> kaupunkiadapteri = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, kaupungit);
         kaupunkiLista.setAdapter(kaupunkiadapteri);
         kaupunkiLista.setOnItemClickListener(this);
+
     }
 
     public void painaGPS(View view) {
@@ -47,6 +59,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         keikkaLista = findViewById(R.id.keikkaLista);
 
         }
+
+    public void onBackPressed(){
+        if
+        setContentView(R.layout.kirjautuminen);
+    };
 
     }
 
