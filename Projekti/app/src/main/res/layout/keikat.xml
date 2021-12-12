@@ -29,6 +29,7 @@
         app:layout_constraintVertical_bias="0.057" />
 
     <ListView
+        android:id="@+id/keikkaLista"
         android:layout_width="326dp"
         android:layout_height="566dp"
         tools:layout_editor_absoluteX="45dp"

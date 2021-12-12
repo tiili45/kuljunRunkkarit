@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     ListView kaupunkiLista; // näkymä näyttää listan kaikista kaupungeista, missä palvelu toimii
+    ListView keikkaLista; //näkymä ilmoitetuista keikoista
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,21 +33,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         kaupunkiLista.setOnItemClickListener(this);
     }
 
+    public void painaGPS(View view) {
+        setContentView(R.layout.gps);
+
+    }
+
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         String otsikko = parent.getItemAtPosition(position).toString();
         setContentView(R.layout.keikat);
         TextView otsikkokaupunki = (TextView) findViewById(R.id.textView2);
         otsikkokaupunki.setText(otsikko);
+        keikkaLista = findViewById(R.id.keikkaLista);
+
+        }
 
     }
 
-    public void painaGPS(View view) {
-        setContentView(R.layout.gps);
-
-    }
 
 
-
-
-}

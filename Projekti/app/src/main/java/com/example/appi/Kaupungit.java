@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Kaupungit {
 
-    ArrayList<String> kaupungit = new ArrayList<>(); /* lista paikoista, jossa toimitukset pyörii */
+    public static ArrayList<String> kaupungit = new ArrayList<>(); /* lista paikoista, jossa toimitukset pyörii */
 
     public Kaupungit() {
         kaupungit.add("Jyväskylä");
@@ -22,7 +22,7 @@ public class Kaupungit {
         this.kaupungit = kaupungit;
     }
 
-    public ArrayList<String> getKaupungit() {
+    public static ArrayList<String> getKaupungit() {
         return kaupungit;
     }
 }
