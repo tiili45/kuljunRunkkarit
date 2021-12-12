@@ -57,13 +57,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         TextView otsikkokaupunki = (TextView) findViewById(R.id.textView2);
         otsikkokaupunki.setText(otsikko);
         keikkaLista = findViewById(R.id.keikkaLista);
+        ArrayList<String> keikat = new ArrayList<>(); // lista paikoista, jossa toimitukset pyörii
+        keikat.add("Homma ois");
+        ArrayAdapter<String> keikkaadapteri = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, keikat);
+        keikkaLista.setAdapter(keikkaadapteri);
 
         }
 
     public void onBackPressed(){
-        if
         setContentView(R.layout.kirjautuminen);
-    };
+    }
 
     }
 
