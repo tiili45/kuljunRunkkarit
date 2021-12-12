@@ -27,17 +27,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void painaKirjaudu(View view) {
         setContentView(R.layout.paaikkuna);
         kaupunkiLista = findViewById(R.id.kaupunkiLista);
-        ArrayList<String> kaupungit = new ArrayList<String>(); /* lista paikoista, jossa toimitukset pyörii */
-        kaupungit.add("Jyväskylä");
-        kaupungit.add("Tampere");
-        kaupungit.add("Helsinki");
-        kaupungit.add("Varkaus");
-        kaupungit.add("Leppävirta");
-        kaupungit.add("Hyvinkää");
-        kaupungit.add("Seinäjoki");
-        kaupungit.add("Pieksämäki");
-        kaupungit.add("Kanamäki");
-        ArrayAdapter<String> kaupunkiadapteri = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, kaupungit);
+        ArrayAdapter<String> kaupunkiadapteri = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Kaupungit.getKaupungit());
         kaupunkiLista.setAdapter(kaupunkiadapteri);
         kaupunkiLista.setOnItemClickListener(this);
     }

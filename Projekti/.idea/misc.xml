@@ -4,17 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/DevausSetit/GitHub/kuljunRunkkarit/Projekti/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <entry key="..\:/ihanSama/kuljunRunkkarit/Projekti/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
-=======
-        <entry key="..\:/DevausSetit/GitHub/kuljunRunkkarit/Projekti/app/src/main/res/layout/keikat.xml" value="0.7333333333333334" />
-=======
+        <entry key="..\:/DevausSetit/GitHub/kuljunRunkkarit/Projekti/app/src/main/res/layout/gps.xml" value="0.22" />
         <entry key="..\:/DevausSetit/GitHub/kuljunRunkkarit/Projekti/app/src/main/res/layout/keikat.xml" value="0.22" />
->>>>>>> 2889fc96f3ea591493b39e45d668ccc4674d6e5e
         <entry key="..\:/DevausSetit/GitHub/kuljunRunkkarit/Projekti/app/src/main/res/layout/kirjautuminen.xml" value="0.25" />
         <entry key="..\:/DevausSetit/GitHub/kuljunRunkkarit/Projekti/app/src/main/res/layout/paaikkuna.xml" value="0.22" />
->>>>>>> 8bdcad986f1bc5347d6cc717d25d6f8884805f62
       </map>
     </option>
   </component>
