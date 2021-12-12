@@ -8,11 +8,12 @@
     <ListView
         android:id="@+id/kaupunkiLista"
         android:layout_width="313dp"
-        android:layout_height="301dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="52dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <TextView
         android:id="@+id/textView"
@@ -25,5 +26,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.924" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="277dp"
+        android:text="GPS"
+        android:onClick="painaGPS"
+        app:layout_constraintBottom_toTopOf="@+id/kaupunkiLista"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
