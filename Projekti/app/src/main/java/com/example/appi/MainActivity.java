@@ -64,9 +64,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         TextView otsikkokaupunki = (TextView) findViewById(R.id.textView2);
         otsikkokaupunki.setText(otsikko);
         keikkaLista = findViewById(R.id.keikkaLista);
-        ArrayList<String> keikat = new ArrayList<>(); // lista paikoista, jossa toimitukset pyörii
-        keikat.add("Homma ois");
-        ArrayAdapter<String> keikkaadapteri = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, keikat);
+        ArrayList<String> keikatlista = new ArrayList<>(); // lista paikoista, jossa toimitukset pyörii
+        keikatlista.add("Homma ois");
+        ArrayAdapter<String> keikkaadapteri = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, keikatlista);
         keikkaLista.setAdapter(keikkaadapteri);
 
         }
@@ -94,7 +94,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
+    public void keikkaTallenna(View view) {
+        Keikka keikka = new Keikka();
+        keikka.setKeikannimi(keikannimi.getText().toString());
+        keikka.setLahtokaupunki(lahtokaupunki.getText().toString());
+        keikka.setKohdekaupunki(kohdekaupunki.getText().toString());
+        keikka.setHinta(hinta.getText().toString());
+        keikka.uusiKeikka();
+        dialog.hide();
     }
+}
 
 
 
