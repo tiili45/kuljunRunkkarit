@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private AlertDialog dialog;
     private EditText keikannimi, lahtokaupunki, kohdekaupunki, hinta;
     private Button tallenna, peruuta;
+    ArrayList<Keikka> keikatlista = new ArrayList<Keikka>(); // lista paikoista, jossa toimitukset pyörii
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,11 +65,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.keikat);
         TextView otsikkokaupunki = (TextView) findViewById(R.id.textView2);
         otsikkokaupunki.setText(otsikko);
-        keikkaLista = findViewById(R.id.keikkaLista);
-        ArrayList<String> keikatlista = new ArrayList<>(); // lista paikoista, jossa toimitukset pyörii
-        keikatlista.add("Homma ois");
-        ArrayAdapter<String> keikkaadapteri = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, keikatlista);
-        keikkaLista.setAdapter(keikkaadapteri);
+        // keikkaLista = findViewById(R.id.keikkaLista);
+        // ArrayAdapter<Keikka> keikkaadapteri = new ArrayAdapter<Keikka>(this, android.R.layout.simple_list_item_1, keikatlista);
+        // keikkaLista.setAdapter(keikkaadapteri);
 
         }
 
@@ -102,6 +101,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         keikka.setKohdekaupunki(kohdekaupunki.getText().toString());
         keikka.setHinta(hinta.getText().toString());
         Keikat.lisaaKeikka(keikka);
+        keikatlista.add(keikka);
+        keikkaLista = findViewById(R.id.keikkaLista);
+        ArrayAdapter<Keikka> keikkaadapteri = new ArrayAdapter<Keikka>(this, android.R.layout.simple_list_item_1, keikatlista);
+        keikkaLista.setAdapter(keikkaadapteri);
+
         dialog.hide();
     }
 
