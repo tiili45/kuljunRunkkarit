@@ -26,6 +26,4 @@ public class Keikka {
         this.hinta = syote;
     }
 
-    public void uusiKeikka() {
-    }
 }

@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import static com.example.appi.Keikat.*;
 
 import java.util.ArrayList;
 
@@ -100,8 +101,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         keikka.setLahtokaupunki(lahtokaupunki.getText().toString());
         keikka.setKohdekaupunki(kohdekaupunki.getText().toString());
         keikka.setHinta(hinta.getText().toString());
-        keikka.uusiKeikka();
+        Keikat.lisaaKeikka(keikka);
         dialog.hide();
+    }
+
+    public void keikkaPeruuta(View view) {
+        setContentView(R.layout.paaikkuna);
+    }
+
+
+    public void printtaaKeikat(View view) {
+        for (Keikka keikka : keikkalista) {
+            System.out.println(keikka.toString());
+        }
     }
 }
 
