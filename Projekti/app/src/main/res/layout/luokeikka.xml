@@ -14,72 +14,72 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/lahtoKaupunki"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.907" />
+        app:layout_constraintVertical_bias="0.791" />
 
     <EditText
         android:id="@+id/lahtoKaupunki"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="12dp"
         android:ems="10"
         android:hint="Lähtö kaupunki"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/kohdeKaupunki"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/kohdeKaupunki"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="12dp"
         android:ems="10"
         android:hint="Kohde kaupunki"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/hinta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/hinta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="292dp"
+        android:layout_marginBottom="88dp"
         android:ems="10"
         android:hint="Hinta"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:text="Tallenna"
+        android:layout_marginStart="60dp"
         android:onClick="keikkaTallenna"
+        android:text="Tallenna"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.696" />
+        app:layout_constraintVertical_bias="0.907" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="108dp"
         android:layout_height="47dp"
-        android:text="Peruuta"
         android:onClick="keikkaPeruuta"
+        android:text="Peruuta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697" />
+        app:layout_constraintVertical_bias="0.908" />
 </androidx.constraintlayout.widget.ConstraintLayout>

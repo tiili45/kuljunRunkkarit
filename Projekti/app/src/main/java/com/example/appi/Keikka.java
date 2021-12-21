@@ -26,4 +26,13 @@ public class Keikka {
         this.hinta = syote;
     }
 
-}
+    public String getKeikannimi() {
+        return keikannimi;
+    }
+
+    @Override
+    public String toString() {
+        String nimi = getKeikannimi();
+        return nimi;
+    }
+    }

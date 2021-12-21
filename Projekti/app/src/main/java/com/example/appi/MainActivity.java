@@ -19,12 +19,11 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     ListView kaupunkiLista; // näkymä näyttää listan kaikista kaupungeista, missä palvelu toimii
-    ListView keikkaLista; //näkymä ilmoitetuista keikoista
+    ListView keikkaListaNakyma; //näkymä ilmoitetuista keikoista
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
     private EditText keikannimi, lahtokaupunki, kohdekaupunki, hinta;
     private Button tallenna, peruuta;
-    ArrayList<Keikka> keikatlista = new ArrayList<Keikka>(); // lista paikoista, jossa toimitukset pyörii
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,10 +100,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         keikka.setKohdekaupunki(kohdekaupunki.getText().toString());
         keikka.setHinta(hinta.getText().toString());
         Keikat.lisaaKeikka(keikka);
-        keikatlista.add(keikka);
-        keikkaLista = findViewById(R.id.keikkaLista);
-        ArrayAdapter<Keikka> keikkaadapteri = new ArrayAdapter<Keikka>(this, android.R.layout.simple_list_item_1, keikatlista);
-        keikkaLista.setAdapter(keikkaadapteri);
+
+        keikkaListaNakyma = findViewById(R.id.keikkaListaNakyma);
+        ArrayAdapter<Keikka> keikkaadapteri = new ArrayAdapter<Keikka>(this, android.R.layout.simple_list_item_1, keikkalista);
+        keikkaListaNakyma.setAdapter(keikkaadapteri);
 
         dialog.hide();
     }
