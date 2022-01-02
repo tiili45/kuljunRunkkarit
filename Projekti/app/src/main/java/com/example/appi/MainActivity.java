@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         kaupungit.add("Helsinki");
         kaupungit.add("Varkaus");
         kaupungit.add("Leppävirta");
+        kaupungit.add("Eimeehuonosti");
+        kaupungit.add("Muteimee");
         kaupungit.add("Hyvinkää");
         kaupungit.add("Seinäjoki");
         kaupungit.add("Pieksämäki");
