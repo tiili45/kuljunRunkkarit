@@ -3,6 +3,7 @@ package com.example.gpsdemo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -62,7 +63,27 @@ public class MainActivity extends AppCompatActivity {
         locationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);*/
 
 
+        sw_gps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (sw_gps.isChecked()) {
+                    // tarkin - käytä GPS
+                    locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+                    tv_sensor.setText("GPS, tarkka:)");
+                }
+                else {
+                    locationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
+                    tv_sensor.setText("Puhelintornit ja WIFI, säästää akkua:]");
+                }
+            }
+        });
+    } // onCreate loppuu
 
+    private void updateGPS() {
+        // Luvat GPS käyttöön
+        // Nykyinen sijainti yhdistetyltä clientiltä
+        // Päivittää käyttöliittymän, esim. asettaa kaikki ominaisuudet textview -kohtiin
 
+        
     }
 }
